@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/book_icon"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:src="@drawable/book_open_page_variant"
+        app:tint="@color/gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Harry Potter and philosophy stone sdfgsd sdfg dfgb fgb"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="8dp"
+        android:textAllCaps="true"
+        android:ellipsize="none"
+        android:maxLines="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/book_icon"
+        app:layout_constraintEnd_toStartOf="@+id/edit_icon"
+        />
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Rawling"
+        android:layout_marginHorizontal="8dp"
+        android:textAllCaps="true"
+        android:ellipsize="none"
+        android:maxLines="100"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/book_icon"
+        app:layout_constraintEnd_toStartOf="@+id/edit_icon"
+        />
+    <ImageView
+        android:id="@+id/edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingHorizontal="8dp"
+        android:src="@drawable/pencil"
+        android:clickable="true"
+        app:tint="@color/gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/trash_icon"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <ImageView
+        android:id="@+id/trash_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingHorizontal="8dp"
+        android:src="@drawable/trash_can"
+        android:clickable="true"
+        app:tint="@color/gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

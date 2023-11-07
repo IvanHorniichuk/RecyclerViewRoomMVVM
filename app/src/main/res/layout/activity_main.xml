@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ivan.horniichuk.bookrepotestroom.main_activity.MainActivityViewModel" />
+        <import type="android.view.View"/>
+    </data>
+    <FrameLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main_activity.MainActivity"
+        android:gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:padding="8dp"
+            android:adapter="@{viewModel.recyclerViewAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/books_list_is_empty_now_create_new_one"
+            android:ellipsize="none"
+            android:maxLines="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:visibility="@{viewModel.state.listEmpty ?  View.VISIBLE : View.GONE }"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/plus"
+            android:layout_margin="12dp"
+            android:onClick="@{viewModel::onNewBookClicked}"/>
+
+    </FrameLayout>
+
+
+</layout>
