@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        BookRepository bookRepository=BookDatabase.getInstance(this);
+        //make minor changes
     }
 
     @Override
