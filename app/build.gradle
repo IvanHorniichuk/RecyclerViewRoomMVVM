@@ -1,8 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
 }
 
 android {
@@ -26,8 +23,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
         viewBinding true
@@ -37,7 +34,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.annotation:annotation:1.7.0'
+    implementation 'androidx.annotation:annotation:1.6.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
     def room_version = "2.6.0"
@@ -45,9 +42,6 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
-    implementation "io.insert-koin:koin-android:2.0.1"
-    implementation 'org.koin:koin-java:2.0.1'
-    //implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'

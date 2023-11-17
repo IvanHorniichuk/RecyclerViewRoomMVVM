@@ -1,6 +1,6 @@
 package com.ivan.horniichuk.bookrepotestroom.data;
 
-import com.ivan.horniichuk.bookrepotestroom.basics.concurency.TaskCallback;
+import com.ivan.horniichuk.bookrepotestroom.data.concurency.TaskCallback;
 
 import java.util.List;
 
