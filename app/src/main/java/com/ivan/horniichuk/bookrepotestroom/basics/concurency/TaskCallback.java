@@ -1,4 +1,4 @@
-package com.ivan.horniichuk.bookrepotestroom.data.concurency;
+package com.ivan.horniichuk.bookrepotestroom.basics.concurency;
 
 @FunctionalInterface
 public interface TaskCallback<T> {

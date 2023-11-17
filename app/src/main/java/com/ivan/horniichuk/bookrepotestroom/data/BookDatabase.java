@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.room.Room;
 
-import com.ivan.horniichuk.bookrepotestroom.data.concurency.TaskCallback;
+import com.ivan.horniichuk.bookrepotestroom.basics.concurency.TaskCallback;
 import com.ivan.horniichuk.bookrepotestroom.data.mappers.BookEntitiesListToBookList;
 import com.ivan.horniichuk.bookrepotestroom.data.mappers.BookToBookEntityMapper;
 import com.ivan.horniichuk.bookrepotestroom.data.room.AppDatabase;
