@@ -1,5 +1,7 @@
 package com.ivan.horniichuk.bookrepotestroom.new_book;
 
+import static org.koin.java.KoinJavaComponent.get;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -16,8 +18,7 @@ public class NewBookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        NewBookViewModel viewModel = new ViewModelProvider(this).get(NewBookViewModel.class);
-        viewModel.setBookRepository(BookDatabase.getInstance(getApplicationContext()));
+        NewBookViewModel viewModel = get(NewBookViewModel.class);
         ActivityNewBookBinding binding = ActivityNewBookBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         binding.setViewModel(viewModel);

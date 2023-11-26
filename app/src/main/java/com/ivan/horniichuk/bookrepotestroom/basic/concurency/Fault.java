@@ -1,4 +1,4 @@
-package com.ivan.horniichuk.bookrepotestroom.data.concurency;
+package com.ivan.horniichuk.bookrepotestroom.basic.concurency;
 
 public class Fault {
     public final Throwable exception;
