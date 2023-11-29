@@ -30,8 +30,12 @@ public class NewBookViewModel extends ViewModel {
     }
 
     public void onSaveClicked(View v) {
-        bookRepository.addNewBook(mapper.map(newBookModelMutableLiveData.getValue()));
-        finish();
+        bookRepository.addNewBook(mapper.map(newBookModelMutableLiveData.getValue()), (result, fault) -> {
+            if (fault == null && result) {
+                finish();
+            }
+        });
+
     }
 
     public void finish() {
