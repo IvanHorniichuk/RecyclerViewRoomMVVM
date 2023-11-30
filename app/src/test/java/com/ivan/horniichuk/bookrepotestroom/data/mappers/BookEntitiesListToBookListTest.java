@@ -1,13 +1,13 @@
 package com.ivan.horniichuk.bookrepotestroom.data.mappers;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 import com.ivan.horniichuk.bookrepotestroom.data.room.BookEntity;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +44,9 @@ public class BookEntitiesListToBookListTest {
     @Test
     public void map() {
         List<BookEntity> mockArrayList=new ArrayList<>();
-        mockArrayList.add(Mockito.mock(BookEntity.class));
-        mockArrayList.add(Mockito.mock(BookEntity.class));
-        mockArrayList.add(Mockito.mock(BookEntity.class));
+        mockArrayList.add(mock(BookEntity.class));
+        mockArrayList.add(mock(BookEntity.class));
+        mockArrayList.add(mock(BookEntity.class));
         assertNotNull(mapper.map(mockArrayList));
     }
 }

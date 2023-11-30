@@ -13,6 +13,7 @@ import com.ivan.horniichuk.bookrepotestroom.data.BookDatabase;
 import com.ivan.horniichuk.bookrepotestroom.main_activity.MainActivityViewModel;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -82,6 +83,5 @@ public class MainActivityViewModelTest {
             assertNotNull(books);
         });
         viewModel.reInitList();
-
     }
 }
