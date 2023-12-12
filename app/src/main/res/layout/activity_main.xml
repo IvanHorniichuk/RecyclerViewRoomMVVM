@@ -45,6 +45,16 @@
             android:layout_margin="12dp"
             android:onClick="@{viewModel::onNewBookClicked}"/>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/generateError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/alert_rhombus"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="80dp"
+            android:onClick="@{viewModel::onGenerateErrorClicked}"/>
+
     </FrameLayout>
 
 

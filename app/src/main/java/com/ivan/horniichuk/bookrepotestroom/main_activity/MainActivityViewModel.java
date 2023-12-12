@@ -58,6 +58,10 @@ public class MainActivityViewModel extends ViewModel {
         state.postValue(tmpState);
 
     }
+    public void onGenerateErrorClicked(View v) {
+        throw new RuntimeException("Test Crash");
+
+    }
 
     public void reInitList() {
         bookRepository.getAllBooks((result, fault) -> {
